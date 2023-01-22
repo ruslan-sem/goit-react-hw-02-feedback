@@ -5,7 +5,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div>
       {arr.map(item => (
-        <button type="button" onClick={() => onLeaveFeedback(item)}>
+        <button type="button" key={item} onClick={() => onLeaveFeedback(item)}>
           {item[0].toUpperCase() + item.slice(1)}
         </button>
       ))}
